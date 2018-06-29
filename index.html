@@ -2,9 +2,6 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-  			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  			  crossorigin="anonymous"></script>
   <title>Exercice 5</title>
 </head>
 <body>
@@ -13,18 +10,15 @@
     <label for="firstName">Prénom : </label><input type="text" name="firstName" id="firstName" />
     <button type="button" name="button">Envoyer</button>
   </form>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
   <script>
-    $('#lastName').focus(function () {
-      $('#lastName').css('border', '1px solid green');
+    $('#lastName, #firstName').focus(function () {
+      $(this).css('border', '1px solid green');
     });
-    $('#lastName').focusout(function () {
-      $('#lastName').css('border', '1px solid red');
-    });
-    $('#firstName').focus(function () {
-      $('#firstName').css('border', '1px solid green');
-    });
-    $('#firstName').focusout(function () {
-      $('#firstName').css('border', '1px solid red');
+    $('#lastName, #firstName').focusout(function () {
+      $(this).css('border', '1px solid red');
     });
   </script>
 </body>
